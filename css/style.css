@@ -215,3 +215,52 @@ footer h1 {
         grid-template-rows: repeat(2, 50px);
     }
 }
+
+
+/*---------------- Branch gallery--------- */
+
+.f-wrap-gallery {
+    max-height: 460px;
+    overflow: hidden;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 90px;
+    grid-auto-flow: dense;
+}
+
+.f-wrap-gallery > div {
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.f-wrap-gallery .horizontal {
+    grid-column: span 2;
+}
+
+.f-wrap-gallery .vertical {
+    grid-row: span 2;
+}
+
+.f-wrap-gallery .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media (max-width: 900px) {
+    .f-wrap-gallery {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 670px) {
+    .f-wrap-gallery {
+        max-height: 475px;
+    }
+}
